@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:picker="http://schemas.android.com/apk/res-auto"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:background="#111"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.sahildeswal.widget.MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hello World!" />
+
+
+
+
+
+    <com.example.sahildeswal.widget.HorizontalPicker
+        android:id="@+id/picker"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#ffffff"
+        android:textSize="22sp"
+        android:ellipsize="none"
+        android:marqueeRepeatLimit="-1"
+        picker:values="@array/values"
+        android:layout_centerInParent="true"
+        picker:dividerSize="@dimen/itemPadding"
+        picker:sideItems="@integer/sideItems" />
+
+
+        <FrameLayout
+            android:id="@+id/frameLayout"
+            android:layout_centerInParent="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/circle"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:text="MIN"
+            android:textColor="#ffffff"
+            android:gravity="center_horizontal"
+            android:layout_alignBottom="@id/frameLayout"
+            android:layout_marginBottom="10dp"
+            android:layout_height="wrap_content" />
+
+</RelativeLayout>
